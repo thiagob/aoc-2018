@@ -4,8 +4,7 @@ def execute(data):
     idx = 0
     while (idx + 1) < len(polymer):
         if polymer[idx].lower() == polymer[idx + 1].lower() and polymer[idx] != polymer[idx + 1]:
-            del polymer[idx + 1]
-            del polymer[idx]
+            del polymer[idx:idx + 2]
             idx -= 1
             if idx < 0:
                 idx = 0
